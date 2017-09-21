@@ -7,8 +7,8 @@ var eliminar = document.querySelector(".eliminar");
 var hideAll = document.querySelector(".hideAll");
 var boton = document.querySelectorAll(".buttons");
 var restantes = document.querySelector(".restantes");
-var down = document.querySelector(".select");
-
+var down = document.querySelector(".down");
+var downDiv = document.querySelector(".downDiv");
 
 //Variables de arranque para la funcion LineEvent
 var line = document.querySelectorAll(".remove");
@@ -192,15 +192,15 @@ function todoOnada(){
   if (checked.length == line.length) {
       //alert("Todo full");
     eliminar.classList.remove("hiden");
-    down.classList.add("allSelected");
+    downDiv.classList.add("allSelected");
   } else if (checked.length === 0){
       //alert("Todo empty");
     eliminar.classList.add("hiden"); 
-    down.classList.remove("allSelected"); 
+    downDiv.classList.remove("allSelected"); 
   }else {
       //alert("casi full");
     eliminar.classList.remove("hiden");
-    down.classList.remove("allSelected");
+    downDiv.classList.remove("allSelected");
   }
   line.textContent = " ";
 }
@@ -217,8 +217,10 @@ function hayNoHay(){
 	if(li.length <= 0){
 		hideAll.classList.add("hiden");
 		active();
+		down.classList.add("hiden");
 	} else {
 		hideAll.classList.remove("hiden");
+		down.classList.remove("hiden");
 	}
 
 	restantes.innerHTML = (line.length - checked.length) + " items left";
