@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/retoDelToDo.css">	
+	<title>To-Do list</title>
+</head>
+<body class="learn-bar">
+	<aside class="learn">
+		<header>
+			<h3>JavaScript</h3>
+			<span class="source-links">
+				<h5>Vanilla JavaScript Example</h5>
+				<a href="https://github.com/tastejs/todomvc/tree/gh-pages/examples/vanillajs">Source</a>
+			</span>
+		</header>
+		<hr>
+		<blockquote class="quote speech-bubble">
+			<p>
+				JavaScript® (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, most known as the scripting language for Web pages, but used in many non-browser environments as well such as node.js or Apache CouchDB.
+			</p>
+			<footer>
+				<a href="http://developer.mozilla.org/en-US/docs/JavaScript">JavaScript</a>
+			</footer>
+		</blockquote>
+		<footer>
+			<hr>
+			<em>
+				If you have other helpful links to share, or find any of the links above no longer work, please
+				<a href="https://github.com/tastejs/todomvc/issues">let us know.</a>
+			</em>
+		</footer>
+	</aside>
+	<section class="parent-section">
+		<header>
+			<h1 id="To-Do-h1">todos</h1>	
+		</header>
+		<section class="child-section">
+			<div class="select">
+				<label><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></label>
+			</div>
+			<input class="new" type="text" placeholder="What needs to be done?" autofocus="" onkeypress="if (event.keyCode==13){createLi()}">
+			<div class="hideAll">
+				<ul class="todosNew">
+				<li class="toBeRemove"><span class="span"><input type="checkbox" class="remove"></span>Hola mundo</li>
+				</ul>
+				<div class="botones paper">
+					<div class="restantes">Hola</div>
+					<button class="all active buttons">All</button>
+			        <button class="completados buttons">Completados</button>
+			        <button class="faltantes buttons">Faltantes</button>
+			        <button class="eliminar">Clear completed</button>
+				</div>
+			</div>		
+		</section>
+	</section>
+
+	
+
+
+	<script type="text/javascript" src="js/retoDelToDo.js"></script>
+</body>
+</html>
